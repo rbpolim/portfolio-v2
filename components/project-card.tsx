@@ -28,14 +28,10 @@ export const ProjectCard = ({
   return (
     <Card>
       <CardHeader>
-        <CardTitle>
-          {title}
-        </CardTitle>
+        <CardTitle>{title}</CardTitle>
       </CardHeader>
       <CardContent>
-        <CardDescription>
-          {description}
-        </CardDescription>
+        <CardDescription>{description}</CardDescription>
       </CardContent>
       <CardFooter>
         <div className="space-x-4">

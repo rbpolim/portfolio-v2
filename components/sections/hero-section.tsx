@@ -2,7 +2,7 @@ import { Button } from "@/components/ui/button"
 
 export const HeroSection = () => {
   return (
-    <section className="h-[calc(100vh-90px)]">
+    <section className="h-[calc(100vh-80px)]">
       <div className="flex flex-col h-full justify-evenly">
         <div className="space-y-4">
           <div className="flex items-center text-2xl gap-x-2">
