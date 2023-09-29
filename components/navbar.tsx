@@ -4,8 +4,8 @@ import { MobileSidebar } from "@/components/mobile-sidebar"
 
 export const Navbar = () => {
   return (
-    <div className="flex max-w-6xl p-4 mx-auto items-center justify-between">
-      <h2 className="hidden md:flex text-4xl font-black">
+    <div className="flex items-center justify-between max-w-6xl p-4 mx-auto">
+      <h2 className="hidden text-4xl font-black md:flex">
         rbpolim_
       </h2>
       <MobileSidebar />
