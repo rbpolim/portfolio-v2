@@ -2,11 +2,11 @@ import { Button } from "@/components/ui/button"
 
 export const HeroSection = () => {
   return (
-    <section className="h-[calc(100vh-80px)]">
+    <section className="h-[calc(100vh-100px)]">
       <div className="flex flex-col h-full justify-evenly">
         <div className="space-y-4">
-          <div className="flex items-center text-2xl gap-x-2">
-            <p className="font-bold ">
+          <div className="flex flex-col items-start text-2xl md:flex-row gap-x-2">
+            <p className="font-bold">
               Hi, I am Rodrigo Polim.
             </p>
             <p className="font-light">
@@ -16,7 +16,7 @@ export const HeroSection = () => {
           <h1 className="text-6xl font-black">
             Fullstack Developer
           </h1>
-          <p className="text-xl font-bold">
+          <p className="text-lg font-bold md:text-xl">
             Passionate about technology and it&apos;s possibilities
           </p>
         </div>

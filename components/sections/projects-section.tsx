@@ -30,14 +30,14 @@ const projects = [
 
 export const ProjectsSection = () => {
   return (
-    <section className="h-screen space-y-10">
+    <section className="min-h-[calc(100vh-100px)]">
       <div className="flex items-center gap-x-4">
         <h2 className="font-black text-7xl">
           projects
         </h2>
-        <div className="w-full h-1 rounded-full bg-neutral-800" />
+        <div className="w-full h-1 rounded-full bg-foreground" />
       </div>
-      <div className="grid grid-cols-1 gap-6 md:grid-cols-2">
+      <div className="grid grid-cols-1 gap-10 mt-16 md:grid-cols-2">
         {projects.map((project) => (
           <ProjectCard
             key={project.title}
