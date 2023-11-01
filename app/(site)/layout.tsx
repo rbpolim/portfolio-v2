@@ -1,4 +1,5 @@
-import { Navbar } from "@/components/navbar"
+import { Header } from "@/components/header"
+import { Footer } from "@/components/footer"
 
 export default function SiteLayout({
   children,
@@ -7,12 +8,11 @@ export default function SiteLayout({
 }) {
   return (
     <div className="h-full text-neutral-900 dark:text-foreground">
-      <header className="h-[100px] flex items-center fixed w-full z-50">
-        <Navbar />
-      </header>
-      <main className="max-w-6xl px-4 py-2 mx-auto pt-[80px]">
+      <Header />
+      <main className="max-w-6xl px-4 mx-auto space-y-20">
         {children}
       </main>
+      <Footer />
     </div>
   )
 }
