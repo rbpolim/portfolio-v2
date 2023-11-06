@@ -12,7 +12,7 @@ export const Header = () => {
   const [scrollNav, setScrollNav] = useState(false)
 
   const changeNav = () => {
-    if (window.scrollY >= 100) {
+    if (window.scrollY >= 80) {
       setScrollNav(true)
     } else {
       setScrollNav(false)
@@ -25,8 +25,8 @@ export const Header = () => {
 
   return (
     <header className={cn(
-      'h-[100px] flex items-center fixed w-full z-50 transition duration-700 ease-in-out',
-      scrollNav ? 'bg-primary-foreground/90' : 'bg-transparent',
+      'h-[100px] flex items-center fixed w-full z-50 transition duration-700 ease-in-out backdrop-blur-sm',
+      scrollNav ? 'bg-primary-foreground/30' : 'bg-transparent',
     )}>
       <div className="flex items-center justify-between w-full max-w-6xl p-4 mx-auto">
         <Logo />
