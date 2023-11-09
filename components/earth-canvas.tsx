@@ -16,7 +16,7 @@ export const Earth = ({ isMobile }: EarthProps) => {
   return (
     <primitive
       object={earth.scene}
-      scale={isMobile ? 1.0 : 2.4}
+      scale={isMobile ? 2.0 : 2.4}
       position-y={0}
       rotation-y={0}
     />
@@ -42,7 +42,6 @@ export const EarthCanvas = () => {
 
   return (
     <Canvas
-      className="-z-50 sm:z-0"
       shadows
       frameloop='demand'
       dpr={[1, 2]}

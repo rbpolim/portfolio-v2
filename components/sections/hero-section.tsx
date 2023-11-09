@@ -3,9 +3,9 @@ import { EarthCanvas } from '@/components/earth-canvas'
 
 export const HeroSection = () => {
   return (
-    <section className="h-[calc(100vh-100px)]">
-      <div className="grid h-full grid-cols-2 pt-32 place-items-center">
-        <div className="flex flex-col items-start justify-between h-full max-h-96">
+    <section className="relative w-full pt-32 md:pt-20">
+      <div className="grid md:grid-cols-2 place-items-center">
+        <div className="flex flex-col items-start justify-between w-full h-full space-y-4 max-h-96">
           <div className="space-y-4">
             <div className="flex flex-col items-start text-2xl">
               <p className="font-bold">
@@ -22,13 +22,13 @@ export const HeroSection = () => {
               Passionate about technology and it&apos;s possibilities
             </p>
           </div>
-          <div>
-            <Button size='lg'>
-              GET IN TOUCH
-            </Button>
-          </div>
+          <Button size='lg'>
+            GET IN TOUCH
+          </Button>
         </div>
-        <EarthCanvas />
+        <div className="absolute inset-0 w-full h-full blur-sm md:blur-0 md:static -z-50 md:z-0">
+          <EarthCanvas />
+        </div>
       </div>
     </section>
   )
