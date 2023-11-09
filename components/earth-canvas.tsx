@@ -1,16 +1,22 @@
 "use client"
 
-import { Suspense } from 'react'
+import { Suspense, useEffect, useState } from 'react'
 import { useGLTF, OrbitControls, Preload } from '@react-three/drei'
 import { Canvas } from '@react-three/fiber'
 
-export const Earth = () => {
+type EarthProps = {
+  isMobile: boolean
+}
+
+export const Earth = ({ isMobile }: EarthProps) => {
   const earth = useGLTF('./earth/scene.gltf')
+
+  console.log(isMobile)
 
   return (
     <primitive
       object={earth.scene}
-      scale={2.0}
+      scale={isMobile ? 1.0 : 2.4}
       position-y={0}
       rotation-y={0}
     />
@@ -18,8 +24,25 @@ export const Earth = () => {
 }
 
 export const EarthCanvas = () => {
+  const [isMobile, setIsMobile] = useState(false)
+
+  useEffect(() => {
+    const mediaQuery = window.matchMedia('(max-width: 500px)')
+
+    setIsMobile(mediaQuery.matches)
+
+    const handler = (e: MediaQueryListEvent) => setIsMobile(e.matches)
+
+    mediaQuery.addEventListener('change', handler)
+
+    return () => {
+      mediaQuery.removeEventListener('change', handler)
+    }
+  }, [])
+
   return (
     <Canvas
+      className="-z-50 sm:z-0"
       shadows
       frameloop='demand'
       dpr={[1, 2]}
@@ -38,7 +61,7 @@ export const EarthCanvas = () => {
           maxPolarAngle={Math.PI / 2}
           minPolarAngle={Math.PI / 2}
         />
-        <Earth />
+        <Earth isMobile={isMobile} />
       </Suspense>
       <Preload all />
     </Canvas>

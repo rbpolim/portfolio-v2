@@ -2,7 +2,6 @@ import { Button } from "@/components/ui/button"
 import { EarthCanvas } from '@/components/earth-canvas'
 
 export const HeroSection = () => {
-
   return (
     <section className="h-[calc(100vh-100px)]">
       <div className="grid h-full grid-cols-2 pt-32 place-items-center">
