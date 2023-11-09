@@ -2,13 +2,18 @@ import { cn } from '@/lib/utils'
 
 type LogoProps = {
   size?: 'sm' | 'md' | 'lg'
+  className?: string
 }
 
 export const Logo = ({
   size = 'md',
+  className = '',
 }: LogoProps) => {
   return (
-    <div className="items-center hidden md:flex">
+    <div className={cn(
+      'items-center hidden md:flex',
+      className,
+    )}>
       <h2 className={cn(
         'font-black',
         size === 'sm' && 'text-2xl',

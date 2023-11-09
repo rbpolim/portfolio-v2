@@ -2,20 +2,20 @@ import Link from "next/link"
 
 export const NavRoutes = () => {
   return (
-    <nav>
-      <ul className="items-center hidden text-2xl transition-colors md:flex gap-x-10">
-        <li >
-          <Link href="/" className="hover:text-neutral-700 dark:text-neutral-300">
+    <nav className="hidden md:flex">
+      <ul className="flex items-center text-2xl transition-colors gap-x-10">
+        <li>
+          <Link href="/" className="hover:text-neutral-700">
             projects
           </Link>
         </li>
         <li>
-          <Link href="/" className="hover:text-neutral-700 dark:text-neutral-300">
+          <Link href="/" className="hover:text-neutral-700">
             contact
           </Link>
         </li>
         <li>
-          <Link href="/" className="hover:text-neutral-700 dark:text-neutral-300">
+          <Link href="/" className="hover:text-neutral-700">
             skills
           </Link>
         </li>

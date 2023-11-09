@@ -7,7 +7,7 @@ export default function SiteLayout({
   children: React.ReactNode
 }) {
   return (
-    <div className="h-full text-neutral-900 dark:text-foreground">
+    <div className="h-full text-neutral-800 dark:text-foreground">
       <Header />
       <main className="max-w-6xl px-4 mx-auto space-y-20">
         {children}
