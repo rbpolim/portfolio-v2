@@ -1,7 +1,7 @@
 import { Bounded } from "@/components/bounded"
 import { ContactForm } from '@/components/contact-form'
 
-export const ContactPage = () => {
+const ContactPage = () => {
   return (
     <Bounded>
       <ContactForm />
