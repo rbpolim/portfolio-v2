@@ -1,9 +1,10 @@
+import { Bounded } from "@/components/bounded"
 import { Button } from "@/components/ui/button"
 import { EarthCanvas } from '@/components/earth-canvas'
 
 export const HeroSection = () => {
   return (
-    <section className="relative w-full pt-32 md:pt-20">
+    <Bounded className="flex items-center h-screen pt-10">
       <div className="grid md:grid-cols-2 place-items-center">
         <div className="flex flex-col items-start justify-between w-full h-full space-y-4 max-h-96">
           <div className="space-y-4">
@@ -30,6 +31,6 @@ export const HeroSection = () => {
           <EarthCanvas />
         </div>
       </div>
-    </section>
+    </Bounded>
   )
 }

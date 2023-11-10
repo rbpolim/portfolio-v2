@@ -2,11 +2,12 @@
 
 import { useEffect, useState } from "react"
 
+import { cn } from "@/lib/utils"
+
 import { Logo } from "@/components/logo"
 import { NavRoutes } from "@/components/nav-routes"
 import { ModeToggle } from "@/components/mode-toggle"
 import { MobileSidebar } from "@/components/mobile-sidebar"
-import { cn } from "@/lib/utils"
 
 export const Header = () => {
   const [scrollNav, setScrollNav] = useState(false)
