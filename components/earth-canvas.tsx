@@ -11,8 +11,6 @@ type EarthProps = {
 export const Earth = ({ isMobile }: EarthProps) => {
   const earth = useGLTF('./earth/scene.gltf')
 
-  console.log(isMobile)
-
   return (
     <primitive
       object={earth.scene}
