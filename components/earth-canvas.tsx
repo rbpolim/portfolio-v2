@@ -14,7 +14,7 @@ export const Earth = ({ isMobile }: EarthProps) => {
   return (
     <primitive
       object={earth.scene}
-      scale={isMobile ? 2.0 : 2.4}
+      scale={isMobile ? 1.8 : 2.0}
       position-y={0}
       rotation-y={0}
     />

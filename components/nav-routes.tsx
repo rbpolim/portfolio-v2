@@ -40,8 +40,12 @@ export const NavRoutes = () => {
             </Link>
           </li>
         ))}
-        <li className="hover:text-neutral-500">
-          CV
+        <li>
+          <Link
+            href='/cv-rbpolim.pdf' className="hover:text-neutral-500"
+          >
+            CV
+          </Link>
         </li>
       </ul>
     </nav>

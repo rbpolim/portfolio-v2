@@ -4,8 +4,8 @@ import { EarthCanvas } from '@/components/earth-canvas'
 
 export const HeroSection = () => {
   return (
-    <Bounded className="flex items-center h-screen pt-10">
-      <div className="grid md:grid-cols-2 place-items-center">
+    <Bounded className="flex items-center h-screen">
+      <div className="grid h-full md:grid-cols-2 place-items-center">
         <div className="flex flex-col items-start justify-between w-full h-full space-y-4 max-h-96">
           <div className="space-y-4">
             <div className="flex flex-col items-start text-2xl">

@@ -7,7 +7,9 @@ import { featuredProjects } from "@/constants/projects"
 export const ProjectsSection = () => {
   return (
     <Bounded>
-      <Heading title="featured projects" />
+      <Heading size="lg" className="font-black">
+        Featured projects
+      </Heading>
       <div className="grid grid-cols-1 gap-10 mt-16 md:grid-cols-2">
         {featuredProjects.map((project) => (
           <ProjectCard
