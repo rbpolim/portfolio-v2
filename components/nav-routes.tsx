@@ -8,25 +8,25 @@ export const NavRoutes = () => {
 
   const routes = [
     {
-      label: "projects",
+      label: "Home",
       path: "/",
+      active: pathname === "/"
+    },
+    {
+      label: "About",
+      path: "/about",
+      active: pathname === "/about"
+    },
+    {
+      label: "Projects",
+      path: "/projects",
       active: pathname === "/projects"
-    },
-    {
-      label: "contact",
-      path: "/contact",
-      active: pathname === "/contact"
-    },
-    {
-      label: "skills",
-      path: "/",
-      active: pathname === "/skills"
     }
   ]
 
   return (
     <nav className="hidden md:flex">
-      <ul className="flex items-center text-2xl transition-colors gap-x-10">
+      <ul className="flex items-center text-xl transition gap-x-10">
         {routes.map((route) => (
           <li key={route.path}>
             <Link
@@ -40,6 +40,9 @@ export const NavRoutes = () => {
             </Link>
           </li>
         ))}
+        <li className="hover:text-neutral-500">
+          CV
+        </li>
       </ul>
     </nav>
   )
