@@ -32,8 +32,10 @@ export const Header = () => {
       <div className="flex items-center justify-between w-full max-w-6xl p-4 mx-auto">
         <Logo />
         <MobileSidebar />
-        <NavRoutes />
-        <ModeToggle />
+        <div className="flex items-center gap-x-8">
+          <NavRoutes />
+          <ModeToggle />
+        </div>
       </div>
     </header>
   )

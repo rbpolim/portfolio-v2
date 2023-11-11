@@ -7,7 +7,7 @@ export const Footer = () => {
 
   return (
     <footer className="flex items-center w-full p-8">
-      <div className="grid w-full grid-cols-1 gap-4 md:grid-cols-3 place-items-center place-content-between">
+      <div className="grid w-full max-w-6xl grid-cols-1 gap-4 mx-auto md:grid-cols-3 place-items-center place-content-between">
         <Logo size="sm" />
         <p>{`Copyright © Rodrigo Polim ${currentYear}`}</p>
         <ul className='flex gap-x-4'>
