@@ -17,10 +17,11 @@ import {
   FormLabel,
   FormMessage
 } from "@/components/ui/form"
+import { Heading } from "./heading"
+import { Textarea } from "./ui/textarea"
 
 const schema = z.object({
-  username: z.string().trim().min(3).max(20),
-  subject: z.string().trim().min(3).max(20),
+  name: z.string().trim().min(3).max(20),
   email: z.string().trim().email(),
   message: z.string().trim().min(10).max(1000)
 })
@@ -34,9 +35,8 @@ export const ContactForm = () => {
   const form = useForm({
     resolver: zodResolver(schema),
     defaultValues: {
-      username: "",
+      name: "",
       email: "",
-      subject: "",
       message: ""
     }
   })
@@ -58,85 +58,84 @@ export const ContactForm = () => {
   }
 
   return (
-    <Form {...form}>
-      <form
-        className="w-full space-y-6 pt-[100px]"
-        onSubmit={form.handleSubmit(onSubmit)}
-      >
-        <div className="grid grid-cols-1 gap-6">
-          <FormField
-            control={form.control}
-            name="username"
-            render={({ field }) => (
-              <FormItem>
-                <FormLabel>Username</FormLabel>
-                <FormControl>
-                  <Input
-                    disabled={isLoading}
-                    placeholder="Type your username here"
-                    {...field}
-                  />
-                </FormControl>
-                <FormMessage />
-              </FormItem>
-            )}
-          />
-          <FormField
-            control={form.control}
-            name="subject"
-            render={({ field }) => (
-              <FormItem>
-                <FormLabel>Subject</FormLabel>
-                <FormControl>
-                  <Input
-                    disabled={isLoading}
-                    placeholder="Type your subject here"
-                    {...field}
-                  />
-                </FormControl>
-                <FormMessage />
-              </FormItem>
-            )}
-          />
-          <FormField
-            control={form.control}
-            name="email"
-            render={({ field }) => (
-              <FormItem>
-                <FormLabel>Email</FormLabel>
-                <FormControl>
-                  <Input
-                    disabled={isLoading}
-                    placeholder="Type your email here"
-                    {...field}
-                  />
-                </FormControl>
-                <FormMessage />
-              </FormItem>
-            )}
-          />
-          <FormField
-            control={form.control}
-            name="message"
-            render={({ field }) => (
-              <FormItem>
-                <FormLabel>Message</FormLabel>
-                <FormControl>
-                  <Input
-                    disabled={isLoading}
-                    placeholder="Type your message here"
-                    {...field}
-                  />
-                </FormControl>
-                <FormMessage />
-              </FormItem>
-            )}
-          />
+    <>
+      <h2 className="mt-16 text-3xl font-bold md:text-5xl">
+        Contact
+      </h2>
+      <div className="grid grid-cols-1 gap-20 mt-24 md:grid-cols-2">
+        <div className="space-y-8 text-foreground/60">
+          <h4 className="font-bold">Let&apos;s chat!</h4>
+          <p className="text-base font-medium leading-6 ">
+            If you have any questions, opportunities or would just like to say hey then feel free to fill out my contact form and I&apos;ll endeavour to get back to you as soon as I can.
+          </p>
+          <p className="text-base font-medium leading-6">
+            Or if you would prefer to, you can also reach me on twitter and discord.
+          </p>
         </div>
-        <Button disabled={isLoading} className="ml-auto" type="submit">
-          Submit
-        </Button>
-      </form>
-    </Form>
+        <Form {...form}>
+          <form
+            className="w-full space-y-6"
+            onSubmit={form.handleSubmit(onSubmit)}
+          >
+            <div className="grid grid-cols-1 gap-4">
+              <FormField
+                control={form.control}
+                name="name"
+                render={({ field }) => (
+                  <FormItem>
+                    <FormLabel>Name</FormLabel>
+                    <FormControl>
+                      <Input
+                        disabled={isLoading}
+                        placeholder="Type your name here"
+                        {...field}
+                      />
+                    </FormControl>
+                    <FormMessage />
+                  </FormItem>
+                )}
+              />
+              <FormField
+                control={form.control}
+                name="email"
+                render={({ field }) => (
+                  <FormItem>
+                    <FormLabel>Email</FormLabel>
+                    <FormControl>
+                      <Input
+                        disabled={isLoading}
+                        placeholder="Type your email here"
+                        {...field}
+                      />
+                    </FormControl>
+                    <FormMessage />
+                  </FormItem>
+                )}
+              />
+              <FormField
+                control={form.control}
+                name="message"
+                render={({ field }) => (
+                  <FormItem>
+                    <FormLabel>Message</FormLabel>
+                    <FormControl>
+                      <Textarea
+                        placeholder="Type your message here"
+                        className="resize-y"
+                        {...field}
+                      />
+                    </FormControl>
+                    <FormMessage />
+                  </FormItem>
+                )}
+              />
+            </div>
+            <Button disabled={isLoading} className="ml-auto" type="submit">
+              Send
+            </Button>
+          </form>
+        </Form>
+      </div>
+    </>
   )
 }
