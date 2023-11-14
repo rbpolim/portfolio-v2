@@ -5,7 +5,7 @@ import { Heading } from "@/components/heading"
 export const ContactSection = () => {
   return (
     <Bounded>
-      <Heading title="contact" />
+      {/* <Heading title="contact" /> */}
       <div className="flex flex-col mt-16 text-lg text-center md:text-2xl gap-y-10">
         <p>
           Im currently open to freelance and actively looking for a full-time job opportunities, so if you like what you&apos;ve seen please don&apos;t hesitate to get in touch!
