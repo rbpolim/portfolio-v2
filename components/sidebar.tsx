@@ -1,32 +1,72 @@
 import Link from "next/link"
+import { usePathname } from "next/navigation"
+import { Linkedin, Twitter } from "lucide-react"
+
+import { cn } from "@/lib/utils"
 
 import { Logo } from "@/components/logo"
 
 export const Sidebar = () => {
+  const pathName = usePathname()
+
+  const routes = [
+    {
+      label: "home",
+      path: "/",
+      isActive: pathName === "/",
+    },
+    {
+      label: "about",
+      path: "/about",
+      isActive: pathName === "/about",
+    },
+    {
+      label: "contact",
+      path: "/contact",
+      isActive: pathName === "/contact",
+    },
+    {
+      label: "skills",
+      path: "/skills",
+      isActive: pathName === "/skills",
+    },
+  ]
+
   return (
-    <div className="h-full overflow-y-auto border-r shadow-sm">
-      <div className="flex flex-col h-full p-6">
+    <div className="flex flex-col h-full overflow-y-auto border-r shadow-sm">
+      <div className="p-8">
         <Logo className="flex" />
-        <nav className="grow">
-          <ul className="flex flex-col items-center pt-20 text-4xl transition gap-y-20">
-            <li>
-              <Link href="/" className="hover:text-neutral-700">
-                projects
-              </Link>
-            </li>
-            <li>
-              <Link href="/" className="hover:text-neutral-700">
-                contact
-              </Link>
-            </li>
-            <li>
-              <Link href="/" className="hover:text-neutral-700">
-                skills
-              </Link>
-            </li>
-          </ul>
-        </nav>
       </div>
+      <nav className="flex flex-col items-start mt-10 transition grow">
+        {routes.map((route) => (
+          <Link
+            key={route.path}
+            href={route.path}
+            className={cn(
+              'w-full p-6 text-3xl transition border-b hover:bg-foreground hover:text-muted-foreground',
+              route.isActive && 'bg-foreground text-muted-foreground'
+            )}
+          >
+            {route.label}
+          </Link>
+        ))}
+      </nav>
+      <footer className="flex items-center justify-center p-6 gap-x-6">
+        <Link
+          href="https://twitter.com/rbpolim"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          <Twitter className="w-8 h-8 animate-bounce" />
+        </Link>
+        <Link
+          href="https://www.linkedin.com/in/rbpolim/"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          <Linkedin className="w-8 h-8 animate-bounce" />
+        </Link>
+      </footer>
     </div>
   )
 }
