@@ -6,7 +6,7 @@ import { ContactForm } from '@/components/contact-form'
 const AboutPage = () => {
   return (
     <Bounded className="py-28">
-      <div className="w-full max-w-2xl mx-auto">
+      <div className="w-full max-w-2xl mx-auto space-y-8">
         <Heading>About</Heading>
         <Heading size="sm" asChild>
           <h3>Background</h3>

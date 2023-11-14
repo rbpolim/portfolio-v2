@@ -17,7 +17,7 @@ export const Text = ({
 
   return (
     <Component className={cn(
-      'leading-relaxed font-medium text-foreground/60',
+      'leading-relaxed font-medium text-muted-foreground',
       className
     )}>
       {children}
