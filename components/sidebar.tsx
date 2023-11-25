@@ -43,7 +43,7 @@ export const Sidebar = () => {
             key={route.path}
             href={route.path}
             className={cn(
-              'w-full p-6 text-3xl transition border-y border-muted-foreground/20 hover:bg-foreground hover:text-muted-foreground',
+              'w-full p-6 text-3xl transition border-y border-muted-foreground/20 hover:bg-muted-foreground/20',
               route.isActive && 'bg-muted-foreground/20'
             )}
           >
