@@ -1,3 +1,5 @@
+import Link from "next/link"
+
 import { Bounded } from "@/components/bounded"
 import { Button } from "@/components/ui/button"
 import { EarthCanvas } from '@/components/earth-canvas'
@@ -23,8 +25,10 @@ export const HeroSection = () => {
               Passionate about technology and it&apos;s possibilities
             </p>
           </div>
-          <Button size='lg'>
-            GET IN TOUCH
+          <Button size='lg' asChild>
+            <Link href="/about">
+              GET IN TOUCH
+            </Link>
           </Button>
         </div>
         <div className="absolute inset-0 w-full h-full blur-sm md:blur-0 md:static -z-50 md:z-0">
