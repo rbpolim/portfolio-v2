@@ -4,8 +4,9 @@ import { useRouter } from "next/navigation"
 import { useForm } from "react-hook-form"
 import { useState } from "react"
 import { zodResolver } from "@hookform/resolvers/zod"
-import toast from "react-hot-toast"
 import { z } from "zod"
+import toast from "react-hot-toast"
+import axios from "axios"
 
 import { Input } from "@/components/ui/input"
 import { Button } from '@/components/ui/button'
@@ -17,11 +18,11 @@ import {
   FormLabel,
   FormMessage
 } from "@/components/ui/form"
-import { Heading } from "./heading"
-import { Textarea } from "./ui/textarea"
+import { Heading } from "@/components/heading"
+import { Textarea } from "@/components/ui/textarea"
 
 const schema = z.object({
-  name: z.string().trim().min(3).max(20),
+  name: z.string().trim().min(2).max(20),
   email: z.string().trim().email(),
   message: z.string().trim().min(10).max(1000)
 })
@@ -43,7 +44,7 @@ export const ContactForm = () => {
 
   const onSubmit = async (values: FormValues) => {
     try {
-      console.log(values)
+      await axios.post("/api/send", values)
 
       router.refresh()
       router.push('/');
@@ -118,7 +119,7 @@ export const ContactForm = () => {
               )}
             />
           </div>
-          <Button disabled={isLoading} className="ml-auto" type="submit">
+          <Button type="submit" disabled={isLoading} className="ml-auto">
             Send
           </Button>
         </form>
