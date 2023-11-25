@@ -5,7 +5,7 @@ import { useForm } from "react-hook-form"
 import { useState } from "react"
 import { zodResolver } from "@hookform/resolvers/zod"
 import { z } from "zod"
-import toast from "react-hot-toast"
+import { toast } from "sonner"
 import axios from "axios"
 
 import { Input } from "@/components/ui/input"
@@ -44,11 +44,13 @@ export const ContactForm = () => {
 
   const onSubmit = async (values: FormValues) => {
     try {
+      setIsLoading(true)
+
       await axios.post("/api/send", values)
 
       router.refresh()
       router.push('/');
-      toast.success("Message sent!")
+      toast.success("The message has been sent")
     } catch (error) {
       console.error(error)
       toast.error("Something went wrong!")
@@ -63,7 +65,7 @@ export const ContactForm = () => {
       <Heading>Get in touch</Heading>
       <Form {...form}>
         <form
-          className="w-full space-y-6"
+          className="space-y-6"
           onSubmit={form.handleSubmit(onSubmit)}
         >
           <div className="grid grid-cols-1 gap-4">
@@ -119,7 +121,11 @@ export const ContactForm = () => {
               )}
             />
           </div>
-          <Button type="submit" disabled={isLoading} className="ml-auto">
+          <Button
+            type="submit"
+            disabled={isLoading}
+            className="w-full"
+          >
             Send
           </Button>
         </form>

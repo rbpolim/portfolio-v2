@@ -1,6 +1,6 @@
 import type { Metadata } from 'next'
 import { Montserrat } from 'next/font/google'
-import { Toaster } from 'react-hot-toast'
+import { Toaster, toast } from 'sonner'
 
 import './globals.css'
 
@@ -27,7 +27,7 @@ export default function RootLayout({
           enableSystem
           disableTransitionOnChange
         >
-          <Toaster />
+          <Toaster position="top-center" />
           {children}
         </ThemeProvider>
       </body>
