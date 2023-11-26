@@ -13,6 +13,7 @@ import { Button } from '@/components/ui/button'
 import {
   Form,
   FormControl,
+  FormDescription,
   FormField,
   FormItem,
   FormLabel,
@@ -116,6 +117,10 @@ export const ContactForm = () => {
                       {...field}
                     />
                   </FormControl>
+                  <FormDescription>
+                    Don&apos;t worry!
+                    Your email won&apos;t be used for marketing or spam by me.
+                  </FormDescription>
                   <FormMessage />
                 </FormItem>
               )}
