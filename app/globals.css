@@ -9,6 +9,13 @@ body,
   text-rendering: optimizeLegibility;
 }
 
+@layer components {
+  .link-underline {
+    @apply border-b-0 bg-gradient-to-r from-primary/60 to-primary/60 bg-[length:0px_3px] bg-no-repeat bg-bottom transition-all duration-300	 ease-in-out pb-1.5 hover:bg-[length:100%_3px];
+  }
+}
+
+
 @layer base {
   :root {
     --background: 0 0% 100%;

@@ -32,8 +32,8 @@ export const NavRoutes = () => {
             <Link
               href={route.path}
               className={cn(
-                'hover:text-neutral-500',
-                route.active && "font-bold text-neutral-700"
+                'hover:text-neutral-500 link-underline',
+                route.active && "font-bold"
               )}
             >
               {route.label}
@@ -42,7 +42,8 @@ export const NavRoutes = () => {
         ))}
         <li>
           <Link
-            href='/cv-rbpolim.pdf' className="hover:text-neutral-500"
+            href='/cv-rbpolim.pdf'
+            className="link-underline"
           >
             CV
           </Link>
