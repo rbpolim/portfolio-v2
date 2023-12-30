@@ -1,26 +1,24 @@
-import { Slot } from "@radix-ui/react-slot"
+import { Slot } from "@radix-ui/react-slot";
 
-import { cn } from "@/lib/utils"
+import { cn } from "@/lib/utils";
 
 type TextProps = {
-  children: React.ReactNode
-  className?: string
-  asChild?: boolean
-}
+  children: React.ReactNode;
+  className?: string;
+  asChild?: boolean;
+};
 
-export const Text = ({
-  children,
-  className,
-  asChild
-}: TextProps) => {
-  const Component = asChild ? Slot : 'p'
+export const Text = ({ children, className, asChild }: TextProps) => {
+  const Component = asChild ? Slot : "p";
 
   return (
-    <Component className={cn(
-      'leading-relaxed font-medium text-muted-foreground',
-      className
-    )}>
+    <Component
+      className={cn(
+        "leading-relaxed font-medium text-muted-foreground font-mono",
+        className
+      )}
+    >
       {children}
     </Component>
-  )
-}
+  );
+};

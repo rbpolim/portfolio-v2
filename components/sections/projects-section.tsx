@@ -1,8 +1,8 @@
-import { Bounded } from "@/components/bounded"
-import { Heading } from "@/components/heading"
-import { ProjectCard } from "@/components/project-card"
+import { Bounded } from "@/components/bounded";
+import { Heading } from "@/components/heading";
+import { ProjectCard } from "@/components/project-card";
 
-import { featuredProjects } from "@/constants/projects"
+import { featuredProjects } from "@/data/resume-projects";
 
 export const ProjectsSection = () => {
   return (
@@ -12,14 +12,9 @@ export const ProjectsSection = () => {
       </Heading>
       <div className="grid grid-cols-1 gap-10 mt-16 md:grid-cols-2">
         {featuredProjects.map((project) => (
-          <ProjectCard
-            key={project.title}
-            title={project.title}
-            description={project.description}
-            buttons={project.buttons}
-          />
+          <ProjectCard data={project} />
         ))}
       </div>
     </Bounded>
-  )
-}
+  );
+};

@@ -16,14 +16,23 @@ const AboutPage = () => {
             <h3>Background</h3>
           </Heading>
           <Text>
-            I&apos;m a software engineer with a background in design. I&apos;ve
-            worked on projects ranging from small business websites to
-            enterprise applications for Fortune 500 companies.
+            I&apos;m a Frontend developer with a real love for crafting digital
+            experiences. Professionally, I've been immersed in web and mobile
+            development since 2021, diving deep into technologies like
+            Typescript, React.js, Next.js, React Native, and Node.js. While I
+            excel in these stacks, I'm also open and adaptable to exploring
+            other languages and technologies.
           </Text>
           <Text>
-            I&apos;m a software engineer with a background in design. I&apos;ve
-            worked on projects ranging from small business websites to
-            enterprise applications for Fortune 500 companies.
+            My expertise extends beyond coding; I delve into crucial areas like
+            Design, Infrastructure, and Database management, driven by my
+            passion and broad knowledge.
+          </Text>
+          <Text>
+            To further my tech know-how, I'm focused on advancing my studies in
+            Systems Analysis and Development, honing my skills in Frontend
+            technologies, and bolstering my interpersonal abilities to stay
+            abreast of market shifts.
           </Text>
           <Heading size="sm" asChild>
             <h3>Interest</h3>
@@ -33,8 +42,8 @@ const AboutPage = () => {
             believe that the best products are built by teams that value both.
           </Text>
         </div>
-        <Separator />
-        <div className="space-y-8">
+        {/* <Separator /> */}
+        {/* <div className="space-y-8">
           <Heading className="font-black">Tools & Technologies</Heading>
           <Text>Here are some of the tools I use most frequently.</Text>
           <div className="grid grid-cols-4 gap-10 pt-10">
@@ -147,7 +156,7 @@ const AboutPage = () => {
               <Text>TypeScript</Text>
             </div>
           </div>
-        </div>
+        </div> */}
         <Separator />
         <ContactForm />
       </div>
