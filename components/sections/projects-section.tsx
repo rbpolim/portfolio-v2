@@ -12,7 +12,7 @@ export const ProjectsSection = () => {
       </Heading>
       <div className="grid grid-cols-1 gap-10 mt-16 md:grid-cols-2">
         {featuredProjects.map((project) => (
-          <ProjectCard data={project} />
+          <ProjectCard key={project.title} data={project} />
         ))}
       </div>
     </Bounded>
