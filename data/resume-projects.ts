@@ -39,14 +39,24 @@ const featuredProjects = [
   {
     title: "Aeras",
     description:
-      "SaaS project boasting a dashboard tailored for air conditioning management.",
+      "SaaS project application boasting a dashboard tailored for air conditioning management.",
     techs: ["TypeScript", "PostgreSQL", "Storybook", "Jest", "TailwindCSS"],
     buttons: [{ label: "VIEW SITE", href: "https://www.aeras.app/" }],
   },
   {
+    title: "Logo Ipsum",
+    description:
+      "SaaS to manage Services Orders, Reports, Surveys and more.",
+    techs: ["TypeScript", "MySQL", "Shadcn/ui", "TailwindCSS", "Next.js"],
+    buttons: [
+      { label: "VIEW SITE", href: "https://logo-ipsum-rbpolim.vercel.app/sign-in" },
+      { label: "VIEW CODE", href: "https://github.com/rbpolim/logo-ipsum" }
+    ],
+  },
+  {
     title: "Portfolio",
     description:
-      "A portfolio website from web/mobile Developer build with TypeScript, NextJS & TailwindCSS.",
+      "Developer portfolio build with TypeScript, Next.js & TailwindCSS.",
     techs: ["TypeScript", "Next.js", "TailwindCSS", "Animation 3D", "Sendgrid"],
     buttons: [
       { label: "VIEW CODE", href: "https://github.com/rbpolim/portfolio-v2" },

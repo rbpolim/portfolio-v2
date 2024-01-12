@@ -1,5 +1,3 @@
-import Image from "next/image";
-
 import { Text } from "@/components/text";
 import { Heading } from "@/components/heading";
 import { Bounded } from "@/components/bounded";
