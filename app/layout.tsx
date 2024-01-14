@@ -1,6 +1,6 @@
 import type { Metadata } from 'next'
 import { Montserrat } from 'next/font/google'
-import { Toaster, toast } from 'sonner'
+import { Toaster } from 'sonner'
 
 import './globals.css'
 
