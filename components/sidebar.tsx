@@ -7,28 +7,23 @@ import { cn } from "@/lib/utils"
 import { Logo } from "@/components/logo"
 
 export const Sidebar = () => {
-  const pathName = usePathname()
+  const pathname = usePathname()
 
   const routes = [
     {
-      label: "home",
+      label: "HOME",
       path: "/",
-      isActive: pathName === "/",
+      isActive: pathname === "/"
     },
     {
-      label: "about",
+      label: "ABOUT",
       path: "/about",
-      isActive: pathName === "/about",
+      isActive: pathname === "/about"
     },
     {
-      label: "contact",
-      path: "/contact",
-      isActive: pathName === "/contact",
-    },
-    {
-      label: "skills",
-      path: "/skills",
-      isActive: pathName === "/skills",
+      label: "PROJECTS",
+      path: "/projects",
+      isActive: pathname === "/projects"
     },
   ]
 
@@ -37,7 +32,7 @@ export const Sidebar = () => {
       <div className="p-8">
         <Logo className="flex" />
       </div>
-      <nav className="flex flex-col items-start mt-10 transition grow">
+      <nav className="flex flex-col items-start mt-10 transition grow font-mono text-center">
         {routes.map((route) => (
           <Link
             key={route.path}

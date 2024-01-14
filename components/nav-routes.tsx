@@ -21,6 +21,10 @@ export const NavRoutes = () => {
       label: "Projects",
       path: "/projects",
       active: pathname === "/projects"
+    },
+    {
+      label: "CV",
+      path: "/cv-rbpolim.pdf",
     }
   ]
 
@@ -40,14 +44,6 @@ export const NavRoutes = () => {
             </Link>
           </li>
         ))}
-        <li>
-          <Link
-            href='/cv-rbpolim.pdf'
-            className="link-underline"
-          >
-            CV
-          </Link>
-        </li>
       </ul>
     </nav>
   )
