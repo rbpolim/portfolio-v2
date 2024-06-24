@@ -1,13 +1,13 @@
 import { Text } from "@/components/text";
 import { Heading } from "@/components/heading";
 import { Bounded } from "@/components/bounded";
-import { ContactForm } from "@/components/contact-form";
 import { Separator } from "@/components/ui/separator";
+import { ContactForm } from "@/components/contact-form";
 
 const AboutPage = () => {
   return (
     <Bounded className="py-28">
-      <div className="w-full max-w-2xl mx-auto flex flex-col my-20 gap-y-20">
+      <div className="flex flex-col w-full max-w-2xl mx-auto my-20 gap-y-20">
         <div className="space-y-8">
           <Heading className="font-black">About</Heading>
           <Heading size="sm" asChild>
@@ -16,7 +16,7 @@ const AboutPage = () => {
           <Text>
             I&apos;m a Frontend developer with a real love for crafting digital
             experiences. Professionally, I've been immersed in web and mobile
-            development since 2021, diving deep into technologies like
+            development since 2020, diving deep into technologies like
             Typescript, React.js, Next.js, React Native, and Node.js. While I
             excel in these stacks, I'm also open and adaptable to exploring
             other languages and technologies.
@@ -40,121 +40,6 @@ const AboutPage = () => {
             believe that the best products are built by teams that value both.
           </Text>
         </div>
-        {/* <Separator /> */}
-        {/* <div className="space-y-8">
-          <Heading className="font-black">Tools & Technologies</Heading>
-          <Text>Here are some of the tools I use most frequently.</Text>
-          <div className="grid grid-cols-4 gap-10 pt-10">
-            <div className="flex flex-col items-center gap-y-1">
-              <Image
-                src={"/icons/typescript.svg"}
-                width={60}
-                height={60}
-                alt={"typescript"}
-              />
-              <Text>TypeScript</Text>
-            </div>
-            <div className="flex flex-col items-center gap-y-1">
-              <Image
-                src={"/icons/typescript.svg"}
-                width={60}
-                height={60}
-                alt={"typescript"}
-              />
-              <Text>TypeScript</Text>
-            </div>
-            <div className="flex flex-col items-center gap-y-1">
-              <Image
-                src={"/icons/typescript.svg"}
-                width={60}
-                height={60}
-                alt={"typescript"}
-              />
-              <Text>TypeScript</Text>
-            </div>
-            <div className="flex flex-col items-center gap-y-1">
-              <Image
-                src={"/icons/typescript.svg"}
-                width={60}
-                height={60}
-                alt={"typescript"}
-              />
-              <Text>TypeScript</Text>
-            </div>
-            <div className="flex flex-col items-center gap-y-1">
-              <Image
-                src={"/icons/typescript.svg"}
-                width={60}
-                height={60}
-                alt={"typescript"}
-              />
-              <Text>TypeScript</Text>
-            </div>
-            <div className="flex flex-col items-center gap-y-1">
-              <Image
-                src={"/icons/typescript.svg"}
-                width={60}
-                height={60}
-                alt={"typescript"}
-              />
-              <Text>TypeScript</Text>
-            </div>
-            <div className="flex flex-col items-center gap-y-1">
-              <Image
-                src={"/icons/typescript.svg"}
-                width={60}
-                height={60}
-                alt={"typescript"}
-              />
-              <Text>TypeScript</Text>
-            </div>
-            <div className="flex flex-col items-center gap-y-1">
-              <Image
-                src={"/icons/typescript.svg"}
-                width={60}
-                height={60}
-                alt={"typescript"}
-              />
-              <Text>TypeScript</Text>
-            </div>
-            <div className="flex flex-col items-center gap-y-1">
-              <Image
-                src={"/icons/typescript.svg"}
-                width={60}
-                height={60}
-                alt={"typescript"}
-              />
-              <Text>TypeScript</Text>
-            </div>
-            <div className="flex flex-col items-center gap-y-1">
-              <Image
-                src={"/icons/typescript.svg"}
-                width={60}
-                height={60}
-                alt={"typescript"}
-              />
-              <Text>TypeScript</Text>
-            </div>
-            <div className="flex flex-col items-center gap-y-1">
-              <Image
-                src={"/icons/typescript.svg"}
-                width={60}
-                height={60}
-                alt={"typescript"}
-              />
-              <Text>TypeScript</Text>
-            </div>
-            <div className="flex flex-col items-center gap-y-1">
-              <Image
-                src={"/icons/typescript.svg"}
-                width={60}
-                height={60}
-                alt={"typescript"}
-              />
-              <Text>TypeScript</Text>
-            </div>
-          </div>
-        </div> */}
         <Separator />
         <ContactForm />
       </div>
