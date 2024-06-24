@@ -1,4 +1,4 @@
-![hero-img](https://github.com/rbpolim/portfolio-v2/assets/66570560/98097c40-8594-4972-a6a6-8e312b65ccb4)
+![hero-img](https://github.com/rbpolim/portfolio-v2/assets/66570560/af8f92f7-e48d-4d74-bc30-e75c15a240a4)
 
 # Project
 
